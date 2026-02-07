@@ -1,19 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  // плавное появление блоков
+  // Появление блоков
   const items = document.querySelectorAll(".animate");
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
 
-          // если секция contact, делаем stagger для иконок
+          // Для секции contact делаем stagger анимацию иконок
           if (entry.target.id === "contact") {
-            const messengerLinks = entry.target.querySelectorAll("a.animate");
-            messengerLinks.forEach((link, i) => {
-              setTimeout(() => {
-                link.classList.add("show");
-              }, i * 300); // по очереди
+            const links = entry.target.querySelectorAll("a.animate");
+            links.forEach((link, i) => {
+              setTimeout(() => link.classList.add("show"), i * 300);
             });
           } else {
             entry.target.classList.add("show");
@@ -27,17 +25,15 @@ document.addEventListener("DOMContentLoaded", () => {
   );
   items.forEach(item => observer.observe(item));
 
-  // плавный скролл меню
+  // Плавный скролл меню
   document.querySelectorAll('.menu a').forEach(link => {
     link.addEventListener('click', e => {
       e.preventDefault();
-      const id = link.getAttribute('href');
-      const target = document.querySelector(id);
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
+      const target = document.querySelector(link.getAttribute('href'));
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   });
 
 });
+
 
