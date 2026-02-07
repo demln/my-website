@@ -106,7 +106,50 @@
     }
   </style>
 </head>
-</body>
+</body><!-- Стильная плавающая кнопка Telegram -->
+<a href="https://t.me/swagatest_bot" target="_blank" class="tg-style-btn" aria-label="Telegram Bot">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff" width="22" height="22">
+    <path d="M9.999 16.714l-.417 3.814c.598 0 .86-.256 1.175-.565l2.824-2.62 5.845 4.275c1.068.588 1.828.28 2.107-1.004l3.815-18.035c.366-1.657-.602-2.33-1.55-1.93L1.837 9.43c-1.593.62-1.574 1.504-.273 1.937l4.625 1.44L17.78 5.114c.474-.27.906-.123.551.171L9.999 16.714z"/>
+  </svg>
+</a>
+
+<style>
+/* Стильная плавающая кнопка Telegram */
+.tg-style-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(145deg, #00cfff, #0080ff);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+  z-index: 9999;
+  animation: pulse 2.5s infinite;
+}
+.tg-style-btn:hover {
+  transform: scale(1.2);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+}
+.tg-style-btn svg {
+  display: block;
+  width: 22px;
+  height: 22px;
+  fill: #fff;
+}
+
+/* Анимация пульса */
+@keyframes pulse {
+  0% { transform: scale(1); box-shadow: 0 6px 12px rgba(0,0,0,0.4); }
+  50% { transform: scale(1.1); box-shadow: 0 10px 20px rgba(0,0,0,0.5); }
+  100% { transform: scale(1); box-shadow: 0 6px 12px rgba(0,0,0,0.4); }
+}
+</style>
+
 
 <style>
 .telegram-icon {
