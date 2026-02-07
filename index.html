@@ -91,7 +91,40 @@
   }
 </style>
 </head>
-</body>
+</body><!-- Мини-кнопка Telegram -->
+<a href="https://t.me/swagatest_bot" target="_blank" class="telegram-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ccc" viewBox="0 0 24 24">
+    <path d="M9.999 16.714l-.417 3.814c.598 0 .86-.256 1.175-.565l2.824-2.62 5.845 4.275c1.068.588 1.828.28 2.107-1.004l3.815-18.035c.366-1.657-.602-2.33-1.55-1.93L1.837 9.43c-1.593.62-1.574 1.504-.273 1.937l4.625 1.44L17.78 5.114c.474-.27.906-.123.551.171L9.999 16.714z"/>
+  </svg>
+</a>
+
+<style>
+.telegram-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #333;  /* темно-серый фон */
+  padding: 10px;
+  border-radius: 50%;      /* круглая кнопка */
+  box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s, background-color 0.3s;
+  z-index: 1000;
+}
+.telegram-icon:hover {
+  background-color: #555; /* чуть светлее при наведении */
+  transform: scale(1.1);
+}
+.telegram-icon svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+  fill: #ccc; /* светло-серый цвет иконки */
+}
+</style>
+
 
 <style>
 .telegram-icon {
